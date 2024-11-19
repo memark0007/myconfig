@@ -1,0 +1,8 @@
+tool
+
+1. zsh: is shell upgrade
+2. oh-my-zsh: custom theme and plugin of zsh
+3. yabai: windown management
+4. shkd: map key to command
+5. karabiner: map key on macbook
+6: top menu bar
