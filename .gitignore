@@ -1,5 +1,6 @@
 # Ignore ไฟล์และโฟลเดอร์ทั่วไป
 node_modules/        # โฟลเดอร์ Node.js dependencies
+myconfig-backup/
 dist/               # ไฟล์ที่ถูก build
 *.log               # ไฟล์ log ทุกประเภท
 .DS_Store           # macOS metadata files

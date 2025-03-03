@@ -8,7 +8,7 @@ set -uo pipefail
 
 # ค่าคงที่
 CONFIG_DIR="$HOME/myconfig"
-BACKUP_DIR="$HOME/myconfig-backup/$(date +%Y%m%d%H%M%S)"
+BACKUP_DIR="$HOME/myconfig/myconfig-backup/$(date +%Y%m%d%H%M%S)"
 LOG_FILE="$CONFIG_DIR/myconfig-manager.log"
 
 # สีแบบ ANSI สำหรับการแสดงผลที่ดีขึ้น
@@ -42,7 +42,7 @@ get_config_path() {
     yabai)      echo "$HOME/.config/yabai/yabairc" ;;
     skhd)       echo "$HOME/.config/skhd/skhdrc" ;;
     karabiner)  echo "$HOME/.config/karabiner/karabiner.json" ;;
-    sketchybar) echo "$HOME/.config/sketchybar/sketchybarrc" ;;
+    sketchybar) echo "$HOME/.config/sketchybar" ;;
     borders)    echo "$HOME/.config/borders/bordersrc" ;;
     *)          echo "" ;;
   esac
@@ -60,7 +60,7 @@ get_source_path() {
     yabai)      echo "$CONFIG_DIR/mac/yabai/yabairc" ;;
     skhd)       echo "$CONFIG_DIR/mac/skhd/skhdrc" ;;
     karabiner)  echo "$CONFIG_DIR/mac/karabiner/karabiner.json" ;;
-    sketchybar) echo "$CONFIG_DIR/mac/sketchybar/sketchybarrc" ;;
+    sketchybar) echo "$CONFIG_DIR/mac/sketchybar" ;;
     borders)    echo "$CONFIG_DIR/mac/borders/bordersrc" ;;
     *)          echo "" ;;
   esac
@@ -160,7 +160,7 @@ restore_config() {
   local tool_name="$2"
   
   # ค้นหาไดเรกทอรีสำรองล่าสุด
-  local backup_dirs=("$HOME"/myconfig-backup/*)
+  local backup_dirs=("$HOME"/myconfig/myconfig-backup/*)
   if [[ ${#backup_dirs[@]} -eq 0 || ! -d "${backup_dirs[0]}" ]]; then
     print_warning "ไม่พบการสำรองสำหรับ $tool_name"
     return 1

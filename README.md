@@ -5,10 +5,10 @@
 ✅ zsh
 ✅ oh-my
 ✅ powerlevel10k
-❌ yabai ยังใช้ไม่ได้
+✅ yabai
 ✅ skhd
 ✅ karabiner
-❌ sketchybar ยังใช้ไม่ได้
+✅ sketchybar
 ✅ borders
 
 ### การทดสอบสคริปต์:
@@ -19,3 +19,6 @@
 	``~/myconfig/myconfig-manager.sh help``
 	or
 	``./myconfig-manager.sh help``
+
+❌ เหลือ script install app
+❌ ทำ Docs อธิบาย
