@@ -3,6 +3,7 @@ node_modules/        # โฟลเดอร์ Node.js dependencies
 myconfig-backup/
 dist/               # ไฟล์ที่ถูก build
 *.log               # ไฟล์ log ทุกประเภท
+myconfig-manager.log
 .DS_Store           # macOS metadata files
 .env                # ไฟล์ environment variables
 
