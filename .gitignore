@@ -1,0 +1,20 @@
+# Ignore ไฟล์และโฟลเดอร์ทั่วไป
+node_modules/        # โฟลเดอร์ Node.js dependencies
+dist/               # ไฟล์ที่ถูก build
+*.log               # ไฟล์ log ทุกประเภท
+.DS_Store           # macOS metadata files
+.env                # ไฟล์ environment variables
+
+# Ignore ทั้งโฟลเดอร์และ subdirectories
+tmp/                # tmp/ และทุกอย่างข้างใน
+build/              # build/ และทุกอย่างข้างใน
+
+# Ignore ไฟล์เฉพาะบางชื่อ
+secret-config.json  # ไฟล์นี้เท่านั้น
+
+# Ignore ไฟล์ทุกไฟล์ในโฟลเดอร์ ยกเว้นบางไฟล์
+data/*
+!data/keep.txt      # data/ ทั้งหมด ยกเว้น keep.txt
+
+# Ignore ไฟล์ที่มีสิทธิ์เฉพาะ
+*.pem               # Private key files

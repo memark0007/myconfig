@@ -1,0 +1,61 @@
+# ################################################################ #
+
+# focus window =========================================
+hyper - h : yabai -m window --focus west  || yabai -m display --focus west
+hyper - j : yabai -m window --focus south || yabai -m display --focus south
+hyper - k : yabai -m window --focus north || yabai -m display --focus north
+hyper - l : yabai -m window --focus east || yabai -m display --focus east
+
+shift + alt - z : yabai -m window --focus next
+hyper - z : yabai -m window --focus prev
+
+# shift window in current workspace =========================================
+alt + shift - h : yabai -m window --swap west || $(yabai -m window --display west; yabai -m display --focus west)
+alt + shift - j : yabai -m window --swap south || $(yabai -m window --display south; yabai -m display --focus south)
+alt + shift - k : yabai -m window --swap north || $(yabai -m window --display north; yabai -m display --focus north)
+alt + shift - l : yabai -m window --swap east || $(yabai -m window --display east; yabai -m display --focus east)
+
+# send window to desktop and follow focus9 =========================================
+shift + alt - 1 : yabai -m window --space  1; osascript -e 'tell application "System Events" to key code 18 using control down'
+shift + alt - 2 : yabai -m window --space  2; osascript -e 'tell application "System Events" to key code 19 using control down'
+shift + alt - 3 : yabai -m window --space  3; osascript -e 'tell application "System Events" to key code 20 using control down'
+shift + alt - 4 : yabai -m window --space  4; osascript -e 'tell application "System Events" to key code 21 using control down'
+shift + alt - 5 : yabai -m window --space  5; osascript -e 'tell application "System Events" to key code 23 using control down'
+shift + alt - 6 : yabai -m window --space  6; osascript -e 'tell application "System Events" to key code 22 using control down'
+shift + alt - 7 : yabai -m window --space  7; osascript -e 'tell application "System Events" to key code 24 using control down'
+shift + alt - 8 : yabai -m window --space  8; osascript -e 'tell application "System Events" to key code 28 using control down'
+shift + alt - 9 : yabai -m window --space  9; osascript -e 'tell application "System Events" to key code 25 using control down'
+shift + alt - 0 : yabai -m window --space  10; osascript -e 'tell application "System Events" to key code 29 using control down'
+
+# toggle window zoom =========================================
+hyper - f : yabai -m window --toggle zoom-fullscreen
+
+# toggle window split type =========================================
+hyper - e : yabai -m window --toggle split
+
+# rotate =========================================
+hyper - r : yabai -m space --rotate 270
+
+# App shortcuts =========================================
+hyper - c : open -a 'Visual Studio Code'
+hyper - g : open -a 'ChatGPT'
+hyper - u : open -a 'Google Chrome'
+hyper - o : open -a 'OBS'
+hyper - t : open -a 'WezTerm'
+
+# Layout reset to BSP =========================================
+hyper - q : yabai -m space --layout bsp
+
+# Increase window size =========================================
+ #### Vertical
+hyper - up : yabai -m window --resize top:0:-20 ; yabai -m window --resize bottom:0:-20
+ #### Horisental
+hyper - right :yabai -m window --resize left:-20:0 ; yabai -m window --resize right:-20:0
+
+# Decrease window size =========================================
+ #### Vertical
+hyper - down : yabai -m window --resize top:0:20 ; yabai -m window --resize bottom:0:20
+ #### Horisental
+hyper - left :  yabai -m window --resize left:20:0 ; yabai -m window --resize right:20:0
+
+
